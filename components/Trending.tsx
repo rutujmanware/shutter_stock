@@ -15,6 +15,45 @@ const images = [
   "https://picsum.photos/id/4/200/300",
   "https://picsum.photos/id/78/200/300",
   "https://picsum.photos/id/90/200/300",
+  "https://picsum.photos/id/18/200/300",
+  "https://picsum.photos/id/198/200/300",
+  "https://picsum.photos/id/201/200/300",
+  "https://picsum.photos/id/202/200/300",
+  "https://picsum.photos/id/204/200/300",
+  "https://picsum.photos/id/71/200/300",
+  "https://picsum.photos/id/91/200/300",
+  "https://picsum.photos/id/81/200/300",
+  "https://picsum.photos/id/47/200/300",
+  "https://picsum.photos/id/50/200/300",
+  "https://picsum.photos/id/51/200/300",
+  "https://picsum.photos/id/52/200/300",
+];
+const images1 = [
+  "https://picsum.photos/id/238/200/300",
+  "https://picsum.photos/id/2/200/300",
+  "https://picsum.photos/id/3/200/300",
+  "https://picsum.photos/id/4/200/300",
+  "https://picsum.photos/id/13/200/300",
+  "https://picsum.photos/id/33/200/300",
+  "https://picsum.photos/id/89/200/300",
+  "https://picsum.photos/id/95/200/300",
+  "https://picsum.photos/id/46/200/300",
+  "https://picsum.photos/id/5/200/300",
+  "https://picsum.photos/id/78/200/300",
+  "https://picsum.photos/id/91/200/300",
+  "https://picsum.photos/id/19/200/300",
+  "https://picsum.photos/id/199/200/300",
+  "https://picsum.photos/id/202/200/300",
+  "https://picsum.photos/id/203/200/300",
+  "https://picsum.photos/id/205/200/300",
+  "https://picsum.photos/id/72/200/300",
+  "https://picsum.photos/id/92/200/300",
+  "https://picsum.photos/id/82/200/300",
+  "https://picsum.photos/id/48/200/300",
+  "https://picsum.photos/id/51/200/300",
+  "https://picsum.photos/id/52/200/300",
+  "https://picsum.photos/id/53/200/300",
+  "https://picsum.photos/id/54/200/300",
 ];
 const Trending = () => {
   const [activeButton, setActiveButton] = useState<String>("popular");
@@ -49,12 +88,15 @@ const Trending = () => {
             </div>
           </div>
           <div className="container">
-            
+           
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  md:gap-4">
-              {images.map((image) => (
+              {activeButton==="popular"? images.map((image) => (
+                <img src={image} className="rounded object-cover"/>
+              )):images1.map((image) => (
                 <img src={image} className="rounded object-cover"/>
               ))}
-            </div>
+            </div> 
+            
             
           </div>
         </div>
