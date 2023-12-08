@@ -24,30 +24,30 @@ const Hero = () => {
           and editorial images.
         </p>
         <div className="flex justify-between items-center w-5/6 mx-auto">
-          <div className="flex justify-between w-full backdrop-blur-md p-2 rounded-md">
+          <div className="flex justify-between w-full backdrop-blur-md p-2 rounded-md ">
             <div className=" flex">
-                <select className="rounded-md outline-none">
+                <select className="rounded-md outline-none shadow-black shadow-md">
                     <option value="all">All images</option>
                     <option value="editorial">Editorial</option>
                     <option value="video">Video</option>
                 </select>
             </div>
             <div className="flex-1 text-white flex items-center justify-center mx-2">
-              <div className="w-full">
+              <div className="w-full ">
                 <input
                   type="text"
                   placeholder="Search for images"
-                  className="w-full p-1 rounded-l-md outline-none"
+                  className="w-full p-1 rounded-l-md outline-none shadow-md shadow-black"
                 />
               </div>
               <div>
-                <button className="btn bg-red-500 rounded-r-md p-2 outline-none">
+                <button className="btn bg-red-500 rounded-r-md p-2 outline-none shadow-md shadow-black">
                   <FaSearch />
                 </button>
               </div>
             </div>
             <div className=" sm:flex hidden">
-                <button className="btn bg-white text-black rounded-md p-1 outline-none">by image</button>
+                <button className="btn bg-white text-black rounded-md p-1 outline-none shadow-black shadow-md">by image</button>
             </div>
           </div>
         </div>

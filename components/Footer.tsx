@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -6,6 +7,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 const Footer = () => {
+    const [activeButton, setActiveButton] = useState<String>("");
+    const handleClick = (button:String) => {
+        if(activeButton===button){
+            setActiveButton("");
+        }
+        else{
+            setActiveButton(button);
+        }
+    }
   return (
     <div className="w-full">
       <div className="flex flex-col justify-center w-full">
@@ -81,13 +91,70 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex w-full justify-between mx-5 mt-10">
-            <div className="flex-1 px-5">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div className="flex-row lg:flex w-full justify-between mx-5 mt-10">
+            <div className="flex-row md:flex-1 px-5">
               <div className="">
                 <select
                   id="language"
                   name="language"
-                  className="bg-black text-white p-4 rounded-full border-4 w-full border-white outline-none"
+                  className="bg-black text-white p-4 rounded-full border-4 w-full border-white outline-none mr-8"
                 >
                   <option value="English">English</option>
                   <option value="French">French</option>
@@ -96,27 +163,35 @@ const Footer = () => {
                 </select>
               </div>
             </div>
-            <div className="flex-1 px-5">
+            <div className="flex-row lg:flex-1 px-5">
               <div className="">
-                <div className="text-white font-bold p-1 pb-2">Our company</div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Sell your content
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">About us</div>
-                <div className="text-gray-300 cursor-pointer p-1">Careers</div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Press/Media
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Investor relations
+                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("our company")}>Our company</div>
+                <div className={`${activeButton === "our company" ? "block" : "hidden"} lg:block`}>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Sell your content
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    About us
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Careers
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Press/Media
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Investor relations
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="flex-1 px-5">
+            <div className="flex-row lg:flex-1 px-5">
               <div>
-                <div className="text-white font-bold p-1 pb-2">
+                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("apps and plugins")}>
                   Apps and plugins
                 </div>
+                <div className={`${activeButton === "apps and plugins" ? "block" : "hidden"} lg:block`}>
+
                 <div className="text-gray-300 cursor-pointer p-1">
                   Color palette generator
                 </div>
@@ -133,9 +208,12 @@ const Footer = () => {
                 <div className="text-gray-300 cursor-pointer p-1">
                   Stock photo plugins
                 </div>
+                </div>
               </div>
               <div className="mt-1">
-                <div className="text-white font-bold p-1 pb-2">Partner</div>
+                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("partner")}>Partner</div>
+                <div className={`${activeButton === "partner" ? "block" : "hidden"} lg:block`}>
+
                 <div className="text-gray-300 cursor-pointer p-1">
                   Developrs
                 </div>
@@ -145,11 +223,14 @@ const Footer = () => {
                 <div className="text-gray-300 cursor-pointer p-1">
                   International reseller
                 </div>
+                </div>
               </div>
             </div>
-            <div className="flex-1 px-5">
+            <div className="flex-row lg:flex-1 px-5">
               <div className="">
-                <div className="text-white font-bold p-1 pb-2">Legal</div>
+                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("legal")}>Legal</div>
+                <div className={`${activeButton === "legal" ? "block" : "hidden"} lg:block`}>
+
                 <div className="text-gray-300 cursor-pointer p-1">
                   Website Terms of Use
                 </div>
@@ -166,9 +247,12 @@ const Footer = () => {
                   Cookie Preferences
                 </div>
                 <div className="text-gray-300 cursor-pointer p-1">Patents</div>
+                </div>
               </div>
               <div className="mt-1">
-                <div className="text-white font-bold p-1 pb-2">Innovation</div>
+                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("innovation")}>Innovation</div>
+                <div className={`${activeButton === "innovation" ? "block" : "hidden"} lg:block`}>
+
                 <div className="text-gray-300 cursor-pointer p-1">
                   Shutterstock.AI
                 </div>
@@ -176,23 +260,64 @@ const Footer = () => {
                   AI image generator
                 </div>
               </div>
+                </div>
             </div>
-            <div className="flex-1 px-5">
+            <div className="flex-row lg:flex-1 px-5">
               <div>
-                <div className="text-white font-bold p-1 pb-2">Contact us</div>
+                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("contact us")}>Contact us</div>
+                <div className={`${activeButton === "contact us" ? "block" : "hidden"} lg:block`}>
+
                 <div className="text-gray-300 cursor-pointer p-1">Help</div>
+                </div>
               </div>
               <div className="mt-1">
-                <div className="text-white font-bold">Services</div>
+                <div className="text-white font-bold" onClick={()=>handleClick("services")}>Services</div>
+                <div className={`${activeButton === "services" ? "block" : "hidden"} lg:block`}>
+
                 <div className="text-gray-300 cursor-pointer p-1">
                   Live assignments
                 </div>
                 <div className="text-gray-300 cursor-pointer p-1">
                   Rights and clearance
                 </div>
+                </div>
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <hr className="mx-20 mt-20 border-t-2 border-gray-800 pb-5" />
 
           <div className="flex flex-row justify-between mx-20">
