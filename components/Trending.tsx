@@ -1,11 +1,24 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 const activeBtnStyles = "p-1 font-bold border-black border-b-4 text-black";
 const inactiveBtnStyles = "p-1 border-b-4 border-gray-300 text-gray-400";
-
-const Trending  = () => {
+const images = [
+  "https://picsum.photos/id/237/200/300",
+  "https://picsum.photos/id/1/200/300",
+  "https://picsum.photos/id/2/200/300",
+  "https://picsum.photos/id/3/200/300",
+  "https://picsum.photos/id/12/200/300",
+  "https://picsum.photos/id/32/200/300",
+  "https://picsum.photos/id/88/200/300",
+  "https://picsum.photos/id/87/200/300",
+  "https://picsum.photos/id/45/200/300",
+  "https://picsum.photos/id/4/200/300",
+  "https://picsum.photos/id/78/200/300",
+  "https://picsum.photos/id/90/200/300",
+];
+const Trending = () => {
   const [activeButton, setActiveButton] = useState<String>("popular");
-  const handleButtonClick = (button:String) => {
+  const handleButtonClick = (button: String) => {
     setActiveButton(button);
   };
   return (
@@ -20,7 +33,7 @@ const Trending  = () => {
               className={`${
                 activeButton === "popular" ? activeBtnStyles : inactiveBtnStyles
               }`}
-            onClick={()=>handleButtonClick("popular")}
+              onClick={() => handleButtonClick("popular")}
             >
               Most Popular
             </div>
@@ -30,10 +43,19 @@ const Trending  = () => {
                   ? activeBtnStyles
                   : inactiveBtnStyles
               }`}
-              onClick={()=>handleButtonClick("handpicked")}
+              onClick={() => handleButtonClick("handpicked")}
             >
               Handpicked content
             </div>
+          </div>
+          <div className="container">
+            
+            <div className="grid grid-cols-4 gap-4">
+              {images.map((image) => (
+                <img src={image} className="rounded object-cover"/>
+              ))}
+            </div>
+            
           </div>
         </div>
       </div>

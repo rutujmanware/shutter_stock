@@ -15,15 +15,17 @@ const Hero = () => {
         </p>
         <div className="w-full flex px-7 sm:px-10 md:px-32 lg:px-56">
           <div className=" flex flex-row items-center mt-5 backdrop-blur-md p-5 w-full rounded-md justify-between">
-            <select
-              id="filter"
-              name="filter"
-              className="mr-3 p-4 border border-gray-300 rounded-md shadow-sm"
-            >
-              <option value="all">All images</option>
-              <option value="marked">Editorial</option>
-              <option value="not-marked">Video</option>
-            </select>
+            <div className="w-1/5 mr-3">
+              <select
+                id="filter"
+                name="filter"
+                className=" p-4 outline-none rounded-md shadow-sm"
+              >
+                <option value="all">All images</option>
+                <option value="marked">Editorial</option>
+                <option value="not-marked">Video</option>
+              </select>
+            </div>
             <div className="flex w-3/5">
               <div className="w-5/6">
                 <input
@@ -38,11 +40,10 @@ const Hero = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden md:flex ml-3">
-            <button className=" bg-white px-9 rounded-md p-4 shadow-md">
-              image
-            </button>
-
+            <div className="hidden md:flex ml-5">
+              <button className=" bg-white rounded-md p-4 px-10 shadow-md outline-none">
+                image
+              </button>
             </div>
           </div>
         </div>
