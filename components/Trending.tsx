@@ -45,7 +45,7 @@ const images1 = [
   "https://picsum.photos/id/199/200/300",
   "https://picsum.photos/id/202/200/300",
   "https://picsum.photos/id/203/200/300",
-  "https://picsum.photos/id/205/200/300",
+  "https://picsum.photos/id/206/200/300",
   "https://picsum.photos/id/72/200/300",
   "https://picsum.photos/id/92/200/300",
   "https://picsum.photos/id/82/200/300",
