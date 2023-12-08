@@ -54,6 +54,11 @@ const images1 = [
   "https://picsum.photos/id/52/200/300",
   "https://picsum.photos/id/53/200/300",
   "https://picsum.photos/id/54/200/300",
+  "https://picsum.photos/id/55/200/300",
+  "https://picsum.photos/id/56/200/300",
+  "https://picsum.photos/id/57/200/300",
+  "https://picsum.photos/id/58/200/300",
+  "https://picsum.photos/id/59/200/300",
 ];
 const Trending = () => {
   const [activeButton, setActiveButton] = useState<String>("popular");
@@ -87,17 +92,20 @@ const Trending = () => {
               Handpicked content
             </div>
           </div>
-          <div className="container">
+          <div className="container justify-center items-center">
            
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  md:gap-4">
+            <div className="grid grid-cols-2 gap-2 md:gap-4 lg:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center items-center">
               {activeButton==="popular"? images.map((image) => (
-                <img src={image} className="rounded object-cover"/>
+                <img src={image} className="rounded "/>
               )):images1.map((image) => (
-                <img src={image} className="rounded object-cover"/>
+                <img src={image} className="rounded "/>
               ))}
             </div> 
-            
-            
+            <div className="flex p-2 justify-center items-center">
+                <div className="bg-black text-white p-2 rounded-full w-2/6 md:w-1/6 items-center justify-center text-center cursor-pointer">
+                See more
+                </div>
+            </div>
           </div>
         </div>
       </div>

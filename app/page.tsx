@@ -1,4 +1,4 @@
-import {Hero,Explore, Trending} from '@/components'
+import {Hero,Explore, Trending, Fresh_collections, Footer} from '@/components'
 import Image from 'next/image'
 
 export default function Home() {
@@ -7,6 +7,8 @@ export default function Home() {
       <Hero />
       <Explore />
       <Trending />
+      <Fresh_collections />
+      <Footer />
     </main>
   )
 }
