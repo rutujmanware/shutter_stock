@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import LanguageIcon from "@mui/icons-material/Language";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -6,16 +6,17 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 const Footer = () => {
-    const [activeButton, setActiveButton] = useState<String>("");
-    const handleClick = (button:String) => {
-        if(activeButton===button){
-            setActiveButton("");
-        }
-        else{
-            setActiveButton(button);
-        }
+  const [activeButton, setActiveButton] = useState<String>("");
+  const handleClick = (button: String) => {
+    if (activeButton === button) {
+      setActiveButton("");
+    } else {
+      setActiveButton(button);
     }
+  };
   return (
     <div className="w-full">
       <div className="flex flex-col justify-center w-full">
@@ -77,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col bg-black h-auto w-full pb-5">
+        <div className="flex flex-col bg-black w-full pb-5">
           <div className="flex justify-center w-full h-auto mt-10">
             <div className="h-10">
               <div className="text-gray-300 text-center">
@@ -91,66 +92,9 @@ const Footer = () => {
             </div>
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <div className="flex-row lg:flex w-full justify-between mx-5 mt-10">
             <div className="flex-row md:flex-1 px-5">
-              <div className="">
+              <div className="mr-5">
                 <select
                   id="language"
                   name="language"
@@ -165,8 +109,24 @@ const Footer = () => {
             </div>
             <div className="flex-row lg:flex-1 px-5">
               <div className="">
-                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("our company")}>Our company</div>
-                <div className={`${activeButton === "our company" ? "block" : "hidden"} lg:block`}>
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("our company")}
+                >
+                  <div>Our company</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "our company" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    activeButton === "our company" ? "block" : "hidden"
+                  } lg:block`}
+                >
                   <div className="text-gray-300 cursor-pointer p-1">
                     Sell your content
                   </div>
@@ -182,141 +142,209 @@ const Footer = () => {
                   <div className="text-gray-300 cursor-pointer p-1">
                     Investor relations
                   </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Shutterstock Blog
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Popular searches
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Coupons
+                  </div>
                 </div>
               </div>
             </div>
             <div className="flex-row lg:flex-1 px-5">
               <div>
-                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("apps and plugins")}>
-                  Apps and plugins
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("apps and plugins")}
+                >
+                  <div>Apps and plugins</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "apps and plugins" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
                 </div>
-                <div className={`${activeButton === "apps and plugins" ? "block" : "hidden"} lg:block`}>
-
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Color palette generator
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Ai Styles
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">iOS app</div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Android app
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Shutter mobile app
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Stock photo plugins
-                </div>
+                <div
+                  className={`${
+                    activeButton === "apps and plugins" ? "block" : "hidden"
+                  } lg:block`}
+                >
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Color palette generator
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Ai Styles
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    iOS app
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Android app
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Shutter mobile app
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Stock photo plugins
+                  </div>
                 </div>
               </div>
               <div className="mt-1">
-                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("partner")}>Partner</div>
-                <div className={`${activeButton === "partner" ? "block" : "hidden"} lg:block`}>
-
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Developrs
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("partner")}
+                >
+                  <div>Partner</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "partner" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
                 </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Affiliate/Reseller
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  International reseller
-                </div>
+                <div
+                  className={`${
+                    activeButton === "partner" ? "block" : "hidden"
+                  } lg:block`}
+                >
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Developrs
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Affiliate/Reseller
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    International reseller
+                  </div>
                 </div>
               </div>
             </div>
             <div className="flex-row lg:flex-1 px-5">
               <div className="">
-                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("legal")}>Legal</div>
-                <div className={`${activeButton === "legal" ? "block" : "hidden"} lg:block`}>
-
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Website Terms of Use
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("legal")}
+                >
+                  <div>Legal</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "legal" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
                 </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Terms of Service
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Privacy policy
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Modern Slavery Statement
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Cookie Preferences
-                </div>
-                <div className="text-gray-300 cursor-pointer p-1">Patents</div>
+                <div
+                  className={`${
+                    activeButton === "legal" ? "block" : "hidden"
+                  } lg:block`}
+                >
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Website Terms of Use
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Terms of Service
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Privacy policy
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Modern Slavery Statement
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Cookie Preferences
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Patents
+                  </div>
                 </div>
               </div>
               <div className="mt-1">
-                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("innovation")}>Innovation</div>
-                <div className={`${activeButton === "innovation" ? "block" : "hidden"} lg:block`}>
-
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Shutterstock.AI
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("innovation")}
+                >
+                  <div>Innovation</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "innovation" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
                 </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  AI image generator
+                <div
+                  className={`${
+                    activeButton === "innovation" ? "block" : "hidden"
+                  } lg:block`}
+                >
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Shutterstock.AI
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    AI image generator
+                  </div>
                 </div>
               </div>
-                </div>
             </div>
             <div className="flex-row lg:flex-1 px-5">
               <div>
-                <div className="text-white font-bold p-1 pb-2" onClick={()=>handleClick("contact us")}>Contact us</div>
-                <div className={`${activeButton === "contact us" ? "block" : "hidden"} lg:block`}>
-
-                <div className="text-gray-300 cursor-pointer p-1">Help</div>
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("contact us")}
+                >
+                  <div>Contact us</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "contact us" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    activeButton === "contact us" ? "block" : "hidden"
+                  } lg:block`}
+                >
+                  <div className="text-gray-300 cursor-pointer p-1">Help</div>
                 </div>
               </div>
               <div className="mt-1">
-                <div className="text-white font-bold" onClick={()=>handleClick("services")}>Services</div>
-                <div className={`${activeButton === "services" ? "block" : "hidden"} lg:block`}>
-
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Live assignments
+                <div
+                  className="flex justify-between text-white font-bold p-1 pb-2"
+                  onClick={() => handleClick("services")}
+                >
+                  <div>Services</div>
+                  <div className="mr-5 lg:hidden">
+                    {activeButton === "services" ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )}
+                  </div>
                 </div>
-                <div className="text-gray-300 cursor-pointer p-1">
-                  Rights and clearance
-                </div>
+                <div
+                  className={`${
+                    activeButton === "services" ? "block" : "hidden"
+                  } lg:block`}
+                >
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Live assignments
+                  </div>
+                  <div className="text-gray-300 cursor-pointer p-1">
+                    Rights and clearance
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <hr className="mx-20 mt-20 border-t-2 border-gray-800 pb-5" />
 

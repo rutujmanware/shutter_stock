@@ -102,7 +102,7 @@ const Trending = () => {
               ))}
             </div> 
             <div className="flex p-2 justify-center items-center">
-                <div className="bg-black text-white p-2 rounded-full w-2/6 md:w-1/6 items-center justify-center text-center cursor-pointer">
+                <div className="bg-black text-white p-2 rounded-full w-2/6 md:w-1/6 items-center justify-center text-center cursor-pointer mb-10 mt-3">
                 See more
                 </div>
             </div>

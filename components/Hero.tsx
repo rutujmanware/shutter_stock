@@ -24,7 +24,7 @@ const Hero = () => {
           and editorial images.
         </p>
         <div className="flex justify-between items-center w-5/6 mx-auto">
-          <div className="flex justify-between w-full backdrop-blur-md p-2 rounded-md ">
+          <div className="flex justify-between w-full backdrop-blur-md p-5 rounded-md ">
             <div className=" flex">
                 <select className="rounded-md outline-none shadow-black shadow-md">
                     <option value="all">All images</option>
@@ -37,11 +37,11 @@ const Hero = () => {
                 <input
                   type="text"
                   placeholder="Search for images"
-                  className="w-full p-1 rounded-l-md outline-none shadow-md shadow-black"
+                  className="w-full py-3 rounded-l-md outline-none shadow-md shadow-black"
                 />
               </div>
               <div>
-                <button className="btn bg-red-500 rounded-r-md p-2 outline-none shadow-md shadow-black">
+                <button className="btn bg-red-500 rounded-r-md p-2 py-4 outline-none shadow-md shadow-black">
                   <FaSearch />
                 </button>
               </div>
