@@ -83,8 +83,8 @@ const Fresh_collections = () => {
           </Slider>
         </div>
       </div>
-      <div className="mt-10 bg-gray-100 ">
-        <div className="flex justify-center items-center gap-5">
+      <div className="mt-10 bg-gray-100">
+        <div className="flex justify-center items-center gap-5 mx-5 lg:mx-10">
           <div className="my-10">
             <div className="">
               <img src="https://picsum.photos/id/120/400/200" />

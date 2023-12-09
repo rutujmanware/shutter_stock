@@ -4,5 +4,5 @@ import Trending from "./Trending";
 import Fresh_collections from "./Fresh_collections";
 import Footer from "./Footer";
 import Card from "./Card";
-
-export { Hero, Explore, Trending, Fresh_collections, Footer, Card};
+import CategoryComponent from "./CategoryComponent";
+export { Hero, Explore, Trending, Fresh_collections, Footer, Card, CategoryComponent};
