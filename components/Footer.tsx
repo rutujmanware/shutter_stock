@@ -348,15 +348,15 @@ const Footer = () => {
 
           <hr className="mx-20 mt-20 border-t-2 border-gray-800 pb-5" />
 
-          <div className="flex flex-row justify-between mx-20">
-            <div>
+          <div className="flex flex-col lg:flex-row  lg:w-auto lg:justify-between mx-20">
+            <div className="flex justify-center">
               <div className="">
                 <p className="text-white text-xs">
                   &copy;2003-2023 shutterstock, inc.
                 </p>
               </div>
             </div>
-            <div className="flex ">
+            <div className="flex justify-center">
               <div className="text-white px-1 cursor-pointer">
                 <FacebookIcon />{" "}
               </div>

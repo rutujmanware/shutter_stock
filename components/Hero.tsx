@@ -37,7 +37,7 @@ const Hero = () => {
                 <input
                   type="text"
                   placeholder="Search for images"
-                  className="w-full py-3 rounded-l-md outline-none shadow-md shadow-black"
+                  className="w-full py-3 rounded-l-md outline-none shadow-md shadow-black px-2 "
                 />
               </div>
               <div>
